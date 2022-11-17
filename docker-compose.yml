@@ -1,0 +1,9 @@
+services:
+  new-york-dev:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: tiger
+      MONGO_INITDB_DATABASE: brooklyn

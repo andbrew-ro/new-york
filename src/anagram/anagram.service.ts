@@ -8,6 +8,14 @@ const isAnagram = require('@pelevesque/is-anagram');
 export class AnagramService {
     constructor(private prismaService: PrismaService) {}
 
+    async list(page: number) {
+        const pageItems = 10;
+        return await this.prismaService.anagram.findMany({
+            skip: (page-1)*pageItems,
+            take: pageItems
+        });
+    }
+
     async create(dto: CreateDto) {
         const options = {
             canonicalize: true,

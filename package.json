@@ -2,7 +2,7 @@
   "name": "new-york",
   "version": "1.0.0",
   "description": "",
-  "author": "",
+  "author": "Andres Romero",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -18,10 +18,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "db:dev:up": "docker compose up new-york-dev -d && sleep 3 && npx prisma db push",
-    "db:dev:rm": "docker compose rm new-york-dev -s -f -v",
-    "db:dev:rs": "npm run db:dev:rm && npm run db:dev:up"
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
